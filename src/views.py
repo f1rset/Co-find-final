@@ -32,3 +32,8 @@ def home():
 @login_required
 def my_activities():
     return render_template('my_activities.html', user = current_user)
+
+@views.route('/my_schedule')
+@login_required
+def my_schedule():
+    return render_template('my_schedule.html', user = current_user)

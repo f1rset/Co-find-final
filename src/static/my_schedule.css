@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.background {
+    background-image: url('ucu.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.logo {
+    color: white;
+    font-size: 45px;
+    font-weight: semi-bold;
+    float: left;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 3px;
+    margin-left: -2%;
+}
+
+.pages {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 26px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.this_page {
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+}
+
+.container {
+    margin: auto;
+    margin-top: 1%;
+    padding: 1px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 84%;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.scrollcontainer {
+    width: 96%;
+    height: inherit;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 3%;
+    margin-left: 2.1%;
+    margin-bottom: 8%;
+}
+
+.fixed-text {
+    margin-top: 3%;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(114, 114, 114, 0.8); 
+    text-align: center;
+}
+
+.activity-in-progress{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 360px;
+    height: 75%;
+    display: inline-block;
+    margin-right: 5%;
+    /* padding-bottom: 2%; */
+}
+
+.photo {
+    width: 80%;
+    height: 50%;
+    background-color: black;
+    margin: auto;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.activity-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 210%;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.data {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 130%;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.more-info-btn {
+    padding: 1vw 1vw;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 1.6vw;
+    cursor: pointer;
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 6%;
+    display: block;
+    margin-bottom: 3%;
+}
+
+.more-info-block {
+    display: inline;
+    position: fixed;
+    width: 90%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3%;
+    background-color: rgb(164, 164, 164);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(37, 37, 37, 0.7);
+    z-index: 2;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.info-block {
+    display: flex;
+}
+
+.activity-name-block, .leave-activity-btn {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.leave-activity-btn, .close-activity-btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popupimage {
+    width: 30%;
+    height: 50%;
+}
+
+.more-act-info {
+    flex: 1;
+    padding-left: 10%;
+}
+
+.more-info-block .leave-activity-btn,
+.close-activity-btn{
+    vertical-align: middle;
+    margin-right: 10px;
+}

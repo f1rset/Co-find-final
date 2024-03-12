@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/my_schedule.css">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title>Co-Find</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo glow">CO-FIND</label>
+        <ul>
+            <li><a href="/home">HOME PAGE</a></li>
+            <li><a href="/personal_info">PERSONAL INFO</a></li>
+            <li><a href="/create_activity">CREATE ACTIVITY</a></li>
+            <li><a href="/my_activities">MY ACTIVITIES</a></li>
+            <li><a class="glow" href="/my_schedule">MY SCHEDULE</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <section></section>
+    <div class="container">
+        <div class="fixed-text">MY SCHEDULE</div>
+
+        <div class="scrollcontainer">
+
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+
+
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+
+
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+
+            <div class="more-info-block" id="moreInfoPopup">
+                <div class="info-block">
+                    <div class="popupimage">
+                        <img class="photo-block" src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                    </div>
+                    <div class="more-act-info">
+                        <h1 class="activity-name-block">activity name</h1>
+                        <p class="data-block">реченець</p>
+                        <p class="description-block">опис події, час, вимоги</p>
+                        <p class="participation-block">0 / 20</p>
+                    </div>
+                </div>
+                <div class="buttons-block">
+                    <button class="close-activity-btn" onclick="closeMoreInfo()">close</button>
+                    <button class="leave-activity-btn" onclick="leaveActivity()">leave</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+        <script src="https://kit.fontawersome.com/a076d05399.js"></script>
+        <script>
+            function openMoreInfo() {
+                document.getElementById('moreInfoPopup').style.display = 'block';
+            }
+            function closeMoreInfo() {
+                document.getElementById('moreInfoPopup').style.display = 'none';
+            }
+            function leaveActivity() {
+            var activityId = "123"; 
+            alert("You have left the activity with ID: " + activityId);
+            }
+        </script>
+
+    </body>
+</html>
