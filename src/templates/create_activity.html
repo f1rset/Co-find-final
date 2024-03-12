@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title>Co-Find</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo glow">CO-FIND</label>
+        <ul>
+            <li><a href="/home">HOME PAGE</a></li>
+            <li><a href="/personal_info">PERSONAL INFO</a></li>
+            <li><a class="glow" href="/create_activity">CREATE ACTIVITY</a></li>
+            <li><a href="/my_activities">MY ACTIVITIES</a></li>
+            <li><a href="/my_schedule">MY SCHEDULE</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <section></section>
+
+    <div class="grid-container">
+        <div class="create_act">
+        <div class="index_div">
+            <p class="create-act-text">CREATE ACTIVITY</p>
+            <div class="info">
+                <form class="activity-form">
+                    <button type="button" id="openModalBtn" class="photo">PHOTO&nbsp;</button>
+                    <h5 class="text-choose">Choose activities</h5>
+                </form>
+                <div class="creation-activity">
+                    <input type="text" placeholder="ACTIVITY NAME" class="input-container">
+                    <input type="text" placeholder="DEADLINE" class="input-container">
+                    <input type="text" placeholder="DESCRIBE YOUR ACTIVITY" class="description" class="input-container">
+                </div>
+            </div>
+        </div>
+        <div class ="activity_div_2">
+            
+            <div class = 'boxes_2'>
+                
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    проєкт для фпн
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    турніри з спорту
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    додаткові заняття
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    компанія на вечір
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    творчий проєкт
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    турніри з навчання
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    прогулянка
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    волейбол
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    it-зустріч
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    it-клуби
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    клуби
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    проєкт
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    футбол
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    мафія
+                </label>
+                <label class ='check_box_2'>
+                    <input type="checkbox" class="check_box_2">
+                    спорт
+                </label>
+            </div>
+        <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi_bi_people_fill" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+            </svg>
+            <input type="text" placeholder="SET LIMIT OF PARTICIPANCE" class="input-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+            </svg>
+            <label class="switch">
+                <input type="checkbox" id="toggle">
+                <span class="slider"></span>
+            </label>
+            <div class="create-btn">
+                <button type="button" id="createActivityBtn" class="create-btn">CREATE</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="photoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="gallery">
+                <img src="../static/images/volleyball.jpg" alt="Image 1">
+                <img src="../static/images/football.jpg" alt="Image 2">
+                <img src="../static/images/jym.jpg" alt="Image 3">
+                <img src="../static/images/mafia.jpg" alt="Image 4">
+                <img src="../static/images/walk.jpg" alt="Image 5">
+                <img src="../static/images/company.jpg" alt="Image 6">
+                <img src="../static/images/walk_2.jpg" alt="Image 7">
+                <img src="../static/images/dinner.jpg" alt="Image 8">
+                <img src="../static/images/programming.jpg" alt="Image 9">
+                <img src="../static/images/project_2.jpg" alt="Image 10">
+                <img src="../static/images/project.jpg" alt="Image 11">
+                <img src="../static/images/math.jpg" alt="Image 12">
+                <img src="../static/images/study.jpg" alt="Image 13">
+                <img src="../static/images/performance.jpg" alt="Image 14">
+                <img src="../static/images/cinema.jpg" alt="Image 15">
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="https://kit.fontawersome.com/a076d05399.js"></script>
+    <script src="../static/photos.js"></script>
+</body>
+</html>

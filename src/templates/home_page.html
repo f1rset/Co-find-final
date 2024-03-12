@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/home_page.css">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Co-Find</title>
+    <style>
+        /* New style for the smaller window */
+        .more-info-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            z-index: 2;
+            max-width: 80%;
+            max-height: 80%;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo glow">CO-FIND</label>
+        <ul>
+            <li><a class="glow" href="/home">HOME PAGE</a></li>
+            <li><a href="/personal_info">PERSONAL INFO</a></li>
+            <li><a href="/create_activity">CREATE ACTIVITY</a></li>
+            <li><a href="/my_activities">MY ACTIVITIES</a></li>
+            <li><a href="/my_schedule">MY SCHEDULE</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <section></section>
+    <div class="background"></div>
+    <div class="container">
+        <div class="fixed-text">ACTIVITIES</div>
+
+        <div class="scrollcontainer">
+
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець триває</p>
+                    <p class="description">опис події, час, вимоги</p>
+                    <p class="description">0 / 20</p>
+                    <button class="end-activity-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець триває</p>
+                    <p class="description">опис події, час, вимоги</p>
+                    <p class="description">0 / 20</p>
+                    <button class="end-activity-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець триває</p>
+                    <p class="description">опис події, час, вимоги</p>
+                    <p class="description">0 / 20</p>
+                    <button class="end-activity-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець триває</p>
+                    <p class="description">опис події, час, вимоги</p>
+                    <p class="description">0 / 20</p>
+                    <button class="end-activity-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+            <div class="more-info-popup" id="moreInfoPopup">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">Activity Name</h1>
+                    <p class="data">реченець триває</p>
+                    <p class="description">опис події, час, вимоги</p>
+                    <p class="description">0 / 20</p>
+                </div>
+                <!-- Add a "Join" button -->
+                <button class="join-activity-btn" onclick="joinActivity()">Join</button>
+                <button onclick="closeMoreInfo()">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        // JavaScript functions to open and close the smaller window
+        function openMoreInfo() {
+            document.getElementById('moreInfoPopup').style.display = 'block';
+        }
+
+        function closeMoreInfo() {
+            document.getElementById('moreInfoPopup').style.display = 'none';
+        }
+
+        // JavaScript function to join the activity
+        function joinActivity() {
+            // Assuming you have an activity ID or other relevant data to identify the activity
+            var activityId = "123"; // Replace with the actual activity ID
+
+            // Implement your logic to handle joining the activity
+            // For example, you can make an AJAX request to a server to update the user's status
+            // or perform any other necessary operations.
+
+            // Here's a simple alert for demonstration purposes
+            alert("You have joined the activity with ID: " + activityId);
+        }
+    </script>
+</body>
+</html>

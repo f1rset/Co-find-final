@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/my_activities.css">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/select_btn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title>Co-Find</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo glow">CO-FIND</label>
+        <ul>
+            <li><a href="/home">HOME PAGE</a></li>
+            <li><a href="/personal_info">PERSONAL INFO</a></li>
+            <li><a href="/create_activity">CREATE ACTIVITY</a></li>
+            <li><a class="glow" href="/my_activities">MY ACTIVITIES</a></li>
+            <li><a href="/my_schedule">MY SCHEDULE</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <section></section>
+    <div class="background"></div>
+    <div class="container">
+        <div class="fixed-text">MY CREATED ACTIVITIES</div>
+
+        <div class="scrollcontainer">
+
+            <div class="activity-in-progress" id="section1">
+                <div class="test">
+                    <div class="photo">
+                        <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                    </div>
+                    <div class="act-info">
+                        <h1 class="activity-name">activity name</h1>
+                        <p class="data">реченець триває</p>
+                        <p class="description">опис події, час, вимоги</p>
+
+                    </div>
+                </div>
+                <div class="requests">
+                    <label for="members-section2">Запити на участь:</label>
+                    <div class="requests-container">
+                        <div class="members-requests">
+                            <div class="member">
+                                <p>request1</p><button class="add-btn">ADD</button>
+                            </div>
+                            <div class="member">
+                                <p>request2</p><button class="add-btn">ADD</button>
+                            </div>
+                            <div class="member">
+                                <p>request3</p><button class="add-btn">ADD</button>
+                            </div>
+                            <div class="member">
+                                <p>request4</p><button class="add-btn">ADD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="end-activity-btn">End Activity</button>
+                </div>
+            </div>
+
+            <div class="activity-in-progress" id="section1">
+                <div class="test">
+                    <div class="photo">
+                        <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                    </div>
+                    <div class="act-info">
+                        <h1 class="activity-name">activity name</h1>
+                        <p class="data">реченець триває</p>
+                        <p class="description">опис події, час, вимоги</p>
+
+                    </div>
+                </div>
+                <div class="requests">
+                    <label for="members-section2">Запити на участь:</label>
+                    <div class="requests-container">
+                        <div class="members-requests">
+                            <div class="member">
+                                <p>request1</p><button class="add-btn">ADD</button>
+                            </div>
+                            <div class="member">
+                                <p>request2</p><button class="add-btn">ADD</button>
+                            </div>
+                            <div class="member">
+                                <p>request3</p><button class="add-btn">ADD</button>
+                            </div>
+                            <div class="member">
+                                <p>request4</p><button class="add-btn">ADD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="end-activity-btn">End Activity</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="https://kit.fontawersome.com/a076d05399.js"></script>
+        <script src="../static/test.js"></script>
+    </body>
+</html>

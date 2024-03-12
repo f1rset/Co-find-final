@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.member {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+.background {
+    background-image: url('ucu.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.logo {
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    float: left;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 3px;
+}
+
+.pages {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 24px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.this_page {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+}
+.container {
+    height: 80dvh;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 5%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 90%;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+.scrollcontainer {
+    margin-top: 2.1%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 95%;
+    height: 65dvh;
+    padding: 15px;
+    overflow-y: scroll;
+}
+.fixed-text {
+    margin-top: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(79, 76, 76, 0.8); 
+}
+.activity-in-progress, .activity-end {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color:  rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 5px rgba(6, 5, 5, 0.1);
+}
+.activity-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.requests .precense {
+    font-family: 'DM Sans', sans-serif;
+}
+.data, .description{
+    font-family: 'DM Sans', sans-serif;
+    text-align: left;
+    font-size: 20px;
+}
+
+
+/* ________________________________________ */
+
+
+
+.fixed-text {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(79, 76, 76, 0.8);
+}
+
+.activity-in-progress,
+.activity-end {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 5px rgba(6, 5, 5, 0.1);
+}
+
+.photo {
+    flex: 1;
+}
+
+.photo img {
+    width: 100%;
+}
+
+.act-info {
+    flex: 3;
+    padding: 0 20px;
+}
+
+.act-info h1,
+.act-info .data,
+.act-info .description {
+    margin: 5px 0;
+}
+
+.members-container {
+    text-align: center;
+}
+.requests {
+    margin-top: auto;
+    flex: 1;
+    text-align: center;
+}
+
+.members,
+.members-requests,
+.members-precense {
+    max-height: 15dvb;
+    overflow-y: scroll;
+    margin-top: 10px;
+    padding: 10%;
+}
+
+.member {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.member button,
+.member input[type="checkbox"] {
+    margin-left: 5%;
+}
+
+.end-activity-btn{
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-btn {
+    padding: 5px 5px 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} 
+
+.requests-container,
+.precense-container {
+    margin-top: 5%;
+    margin-bottom: 20px;
+}
+
+.precense input[type="checkbox"] {
+    margin-left: 5px;
+}
+
+.test{
+    display: flex;
+    width: 70%;
+}

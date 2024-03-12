@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.background {
+    background-image: url('ucu.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.logo {
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    float: left;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 3px;
+}
+
+.pages {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 24px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.this_page {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+}
+
+.container {
+    height: 80dvh;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 5%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 90%;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+.scrollcontainer {
+    margin-top: 2.1%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 95%;
+    height: 70dvh;
+    padding: 15px;
+    border-radius: 50px;
+    overflow-y: scroll;
+    margin-bottom: 2.1%;
+}
+.fixed-text {
+    margin-top: 25px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(79, 76, 76, 0.8); 
+}
+.activity-in-progress, .activity-end {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color:  rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 5px rgba(6, 5, 5, 0.1);
+}
+.activity-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.data, .description{
+    font-family: 'DM Sans', sans-serif;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 25%;
+}
+.photo {
+    float: left;
+    width: 35%;
+    height: auto;
+    background-color: black;
+}
+.end-activity-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.more-info-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    color: black;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.more-info-popup p, .more-info-popup button {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.more-info-popup button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.more-info-popup .join-activity-btn,
+.more-info-popup button {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
