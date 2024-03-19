@@ -33,13 +33,14 @@ nav ul li{
   text-align: center;
 }
 nav ul li a{
+  text-decoration: none;
   color: white;
   font-size: 11px;
   padding: 0px;
   text-transform: uppercase;
 }
 a.active,a:hover{
-  font-weight: 1000;
+  text-shadow: 0 0 1px, 0 0 1px, 0 0 2px, 0 0 1px, 0 0 1px, 0 0 1px, 0 0 1px, 0 0 1px;
   transition: .5s;
 }
 .checkbtn{
@@ -266,7 +267,6 @@ body{
 }
 
 .grid-container {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   background-color: rgba(255, 255, 255, 0.475);
@@ -275,7 +275,7 @@ body{
   padding: 3%;
   padding-right: 3%;
   font-size: 30px;
-  width: 70%;
+  width: 80%;
   margin: auto;
   margin-top: 2%;
   color: rgb(2, 0, 0);
@@ -311,7 +311,7 @@ body{
 }
 
 .glow{
-  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #ccc919, 0 0 2px #fff, 0 0 2px #fff;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #ccc919, 0 0 1px #fff, 0 0 1px #fff;
 }
 
 .index_div p{
@@ -390,7 +390,7 @@ body{
 }
 
 .info {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 220px);
   gap: 20px;
 }
@@ -444,8 +444,9 @@ body{
   }
 
   .creation-activity .input-container {
-    width: 600px;
-    height: 40px;
+    width: 80%;
+    text-align: center;
+    height: 4dvb;
     margin-bottom: 12px;
     border: 2px solid #000000b3;
     border-radius: 5px;
@@ -453,8 +454,8 @@ body{
   }
   
   .creation-activity .description {
-    width: 600px;
-    height: 100px;
+    width: 90%;
+    height: 20dvb;
     margin-bottom: 25px;
     border: 2px solid #000000b3;
     border-radius: 5px;
@@ -607,4 +608,16 @@ body{
 }
 .icons{
 justify-content: center;
+}
+.activity-picture {
+  display: inline-block;
+  width: 60vb;
+  height: 50vb;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-picture img {
+  width: 100%;
+  height: 100%;
 }

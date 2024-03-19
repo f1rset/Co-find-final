@@ -30,7 +30,13 @@
         <div class="index_div">
             <p class="create-act-text">CREATE ACTIVITY</p>
             <div class="info">
-                    <button type="button" id="openModalBtn" class="photo">PHOTO&nbsp;</button>
+                <div>
+                <a href="#" id="openModalBtn" class="activity-picture">
+                    <img src="../static/images/default.jpg" alt="Default Image">
+                    <input type="hidden" name="image">
+                </a>
+                </div>
+                <div>
                     <h5 class="text-choose">Choose activities</h5>
                     <div class="creation-activity">
                         <input 
@@ -52,6 +58,7 @@
                         name="description"
                         required>
                     </div>
+                </div>
             </div>
         </div>
         <div class ="activity_div_2">
@@ -127,46 +134,118 @@
             <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi_bi_people_fill" viewBox="0 0 16 16">
                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
             </svg>
-            <input type="number" placeholder="SET LIMIT OF PARTICIPANCE" class="input-container">
+            <input type="number" placeholder="SET LIMIT OF PARTICIPANCE" class="input-container" name = "capacity">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
                 <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
             </svg>
             <label class="switch">
-                <input type="checkbox" id="toggle">
+                <input type="checkbox" id="toggle" name = "comments">
                 <span class="slider"></span>
             </label>
             <div class="create-btn">
                 <button type="submit" id="createActivityBtn" class="create-btn">CREATE</button>
             </div>
+            {% with messages = get_flashed_messages(with_categories=false) %}
+              {% for message in messages %}
+              {% if category == 'act-error' %}
+              <div class="alert-login alert alert-danger alter-dismissable fade show" role = "alert">
+                {{ message }}
+              </div>
+              {% elif category == 'act-success' %}
+              <div class="alert alert-success alter-dismissable fade show" role = "alert">
+                {{ message }}
+              </div>
+              {% endif %}
+              {% endfor %}
+            {% endwith %}
         </div>
     </div>
 </form>
 
 
-    <div id="photoModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="gallery">
-                <img src="../static/images/volleyball.jpg" alt="Image 1">
+<div id="photoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="gallery">
+            <a href="#" class="modal-button" data-image="../static/images/default.jpg">
+                <img src="../static/images/default.jpg" alt="Image 1">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/football.jpg">
                 <img src="../static/images/football.jpg" alt="Image 2">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/jym.jpg">
                 <img src="../static/images/jym.jpg" alt="Image 3">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/mafia.jpg">
                 <img src="../static/images/mafia.jpg" alt="Image 4">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/walk.jpg">
                 <img src="../static/images/walk.jpg" alt="Image 5">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/company.jpg">
                 <img src="../static/images/company.jpg" alt="Image 6">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/walk_2.jpg">
                 <img src="../static/images/walk_2.jpg" alt="Image 7">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/dinner.jpg">
                 <img src="../static/images/dinner.jpg" alt="Image 8">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/programming.jpg">
                 <img src="../static/images/programming.jpg" alt="Image 9">
-                <img src="../static/images/project_2.jpg" alt="Image 10">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/volleyball.jpg">
+                <img src="../static/images/volleyball.jpg" alt="Image 10">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/project.jpg">
                 <img src="../static/images/project.jpg" alt="Image 11">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/math.jpg">
                 <img src="../static/images/math.jpg" alt="Image 12">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/study.jpg">
                 <img src="../static/images/study.jpg" alt="Image 13">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/performance.jpg">
                 <img src="../static/images/performance.jpg" alt="Image 14">
+            </a>
+            <a href="#" class="modal-button" data-image="../static/images/cinema.jpg">
                 <img src="../static/images/cinema.jpg" alt="Image 15">
-            </div>
+            </a>
         </div>
     </div>
-    </div>
-    
+</div>
+
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const modalButton = document.getElementById('openModalBtn');
+    const modal = document.getElementById('photoModal');
+    const modalImage = modal.querySelector('img');
+
+    modalButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        modal.style.display = 'block';
+    });
+
+    const closeButton = modal.querySelector('.close');
+    closeButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    const modalButtons = document.querySelectorAll('.modal-button');
+    modalButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            const imageSrc = this.querySelector('img').getAttribute('src');
+            modalImage.src = imageSrc;
+            modal.style.display = 'block';
+            modalButton.querySelector('img').src = imageSrc;
+            imageInput.value = imageSrc;
+        });
+    });
+});
+    </script>
     <script src="https://kit.fontawersome.com/a076d05399.js"></script>
     <script src="../static/photos.js"></script>
 </body>

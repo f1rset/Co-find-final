@@ -67,7 +67,7 @@ def signup():
         user_mail = User.query.filter_by(email = email).first()
         matcher = False
         if user:
-            flash('Username already exists!!!', category='error')
+            flash('Username already exists!', category='error')
         elif user_mail:
             flash('This email already in use!', category='error')
         elif matcher:

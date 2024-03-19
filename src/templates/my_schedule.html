@@ -29,90 +29,105 @@
         <div class="fixed-text">MY SCHEDULE</div>
 
         <div class="scrollcontainer">
-
+            {% for act in result_activities%}
             <div class="activity-in-progress" id="section1">
                 <div class="photo">
                     <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
                 </div>
                 <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
+                    <h1 class="activity-name">{{ act.name }}</h1>
+                    <p class="data">Deadline: {{ act.deadline }}</p>
                     <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
                 </div>
             </div>
 
 
-            <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                </div>
-                <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
-                </div>
-            </div>
-
-            <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                </div>
-                <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
-                </div>
-            </div>
-
-
-            <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                </div>
-                <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
-                </div>
-            </div>
-            <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                </div>
-                <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
-                </div>
-            </div>
-            <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                </div>
-                <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
-                </div>
-            </div>
-
+            
             <div class="more-info-block" id="moreInfoPopup">
                 <div class="info-block">
                     <div class="popupimage">
                         <img class="photo-block" src="../static/images/performance.jpg" alt="Activity Image" width="100%">
                     </div>
                     <div class="more-act-info">
-                        <h1 class="activity-name-block">activity name</h1>
-                        <p class="data-block">реченець</p>
-                        <p class="description-block">опис події, час, вимоги</p>
-                        <p class="participation-block">0 / 20</p>
+                        <h1 class="activity-name-block">{{ act.name }}</h1>
+                        <p class="data-block">Deadline: {{ act.deadline }}</p>
+                        <p class="description-block">{{ act.info }}</p>
+                        <p class="participation-block">0 / {{ act.capacity }}</p>
                     </div>
                 </div>
+                {% with messages = get_flashed_messages(with_categories=false) %}
+                    {% for message in messages %}
+                    {% if category == 'schedule-error' %}
+                    <div class="alert-login alert alert-danger alter-dismissable fade show" role = "alert">
+                      {{ message }}
+                      <!-- <button type="button" class="close" data-dismiss="alert">
+                        <span area-hidden = "true">&times;</span>
+                      </button> -->
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                {% endwith %}
                 <div class="buttons-block">
-                    <button class="close-activity-btn" onclick="closeMoreInfo()">close</button>
-                    <button class="leave-activity-btn" onclick="leaveActivity()">leave</button>
+                    <form method="post">
+                        <button class="close-activity-btn" onclick="closeMoreInfo()">close</button>
+                    <button class="leave-activity-btn" name = 'leave' value = '{{ act.id }}' onclick="leaveActivity()">leave</button>
+                    </form>
                 </div>
             </div>
+            {% endfor %}
+            <!-- <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+
+
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div>
+            <div class="activity-in-progress" id="section1">
+                <div class="photo">
+                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                </div>
+                <div class="act-info">
+                    <h1 class="activity-name">activity name</h1>
+                    <p class="data">реченець</p>
+                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                </div>
+            </div> -->
 
         </div>
     </div>
