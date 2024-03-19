@@ -25,5 +25,4 @@ class Activities(db.Model):
     image = db.Column(db.String(150))
     tags = db.Column(JSON)
     capacity = db.Column(db.Integer)
-    checked_users = db.Column(db.String(1500))
-    added_users = db.Column(db.String(1500))
+    users = db.Column(JSON)
