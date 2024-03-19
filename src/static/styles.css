@@ -160,7 +160,7 @@ a.active,a:hover{
 .login-page-main{
   background-color: rgba(255, 255, 255, 0.5);
   margin: auto;
-  margin-top: 3%;
+  margin-top: 1%;
   margin-bottom: 3%;
   height: fit-content(20em);
   width: 30%;
@@ -183,7 +183,7 @@ a.active,a:hover{
 .login-h{
   text-decoration: none;
   font-size: 60px;
-  margin-top: 15%;
+  margin-top: 10%;
   color: #000;
 }
 
@@ -194,8 +194,9 @@ a.active,a:hover{
 }
 
 .login-txt{
-  font-size: 25px;
-  margin-top: 10%;
+  font-size: 18px;
+  margin-top: 5%;
+  margin-bottom: 2%;
 }
 
 .login-form-main button {
@@ -211,7 +212,7 @@ a.active,a:hover{
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 12%;
+  margin-top: 3%;
 }
 
 .login-form-main button:hover {
@@ -291,7 +292,7 @@ body{
   width: 100%;
   font-size:medium;
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: 2px solid #000000b3;
   border-radius: 5px;
   box-sizing: border-box;
@@ -321,8 +322,14 @@ body{
 }
 .check_box {
   display: inline-block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 5px;
+  background-color: #7f7f7f;
+  padding: 0px 7px;
+  border-radius: 10px;
 }
 
 .check_box input {
@@ -331,12 +338,12 @@ body{
 
 .glow-text {
   font-size: 20px;
-  color: #333;
+  color: #ffffff;
   transition: text-shadow 0.3s ease;
 }
 
 .check_box input:checked + .glow-text {
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+  text-shadow: 0 0 5px #fff700, 0 0 10px #fff700, 0 0 15px #fff700, 0 0 20px #fff700;
 }
 .activities-pos{
   display: flex;
@@ -466,12 +473,13 @@ body{
   }
 
   .icons .input-container{
-    width: 300px;
+    width: 200px;
     height: 40px;
     margin-bottom: 15px;
     border: 2px solid #000000b3;
     border-radius: 5px;
     box-sizing: border-box;
+    text-align: center;
   }
   .description {
     height: 150px;
@@ -580,21 +588,23 @@ body{
 .create-btn{
   display: inline-block;
   width: 200px;
-  height: 45px;
+  height: 40px;
   background-color: #000;
   color: #ffffff;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 11px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border-radius: 6cap;
 }
 .login-form{
   display: inline;
 }
 .create-act{
   display: flex;
+}
+.icons{
+justify-content: center;
 }

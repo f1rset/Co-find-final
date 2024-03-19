@@ -4,9 +4,26 @@ from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from flask_login import login_required, login_user, current_user, logout_user
+from re import match, compile
 #Creating a blueprint
 auth = Blueprint('auth', __name__)
-
+DEFAULT_TAGS = {
+    'fpn_proj': False,
+    'sport_ch': False,
+    'additional': False,
+    'evening_comp': False,
+    'art_proj': False,
+    'learn_ch': False,
+    'walk': False,
+    'volleyball': False,
+    'it_meeting': False,
+    'it_clubs': False,
+    'clubs': False,
+    'proj': False,
+    'football': False,
+    'mafia': False,
+    'sport': False,    
+}
 #Creating routes
 @auth.route('/login', methods = ['GET', 'POST'])
 def login():
@@ -47,11 +64,15 @@ def signup():
 
     #Checking valid data
         user = User.query.filter_by(username = username).first()
-
+        user_mail = User.query.filter_by(email = email).first()
+        matcher = False
         if user:
             flash('Username already exists!!!', category='error')
-
-        if len(email) < 4:
+        elif user_mail:
+            flash('This email already in use!', category='error')
+        elif matcher:
+            flash('This is not UCU email!', category='error')
+        elif len(email) < 4:
             flash('Email must be greater than 4 characters.', category='error')
         elif len(username) < 2:
             flash('Username must be greater than 2 characters.', category='error')
@@ -61,8 +82,13 @@ def signup():
             flash('Password must be greater than 7 characters.', category='error')
         else:
             #adding user to database
-            new_user = User(username = username, email = email, \
-                            password = generate_password_hash(password1, method='scrypt'))
+            new_user = User(
+                username = username,
+                email = email,
+                password = generate_password_hash(password1, method='scrypt'),
+                reputation = 1000,
+                tags = DEFAULT_TAGS
+                )
             db.session.add(new_user)
             db.session.commit()
             flash('Account created', category='success')

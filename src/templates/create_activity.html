@@ -24,92 +24,110 @@
         </ul>
     </nav>
     <section></section>
-
+    <form method="POST">
     <div class="grid-container">
         <div class="create_act">
         <div class="index_div">
             <p class="create-act-text">CREATE ACTIVITY</p>
             <div class="info">
-                <form class="activity-form">
                     <button type="button" id="openModalBtn" class="photo">PHOTO&nbsp;</button>
                     <h5 class="text-choose">Choose activities</h5>
-                </form>
-                <div class="creation-activity">
-                    <input type="text" placeholder="ACTIVITY NAME" class="input-container">
-                    <input type="text" placeholder="DEADLINE" class="input-container">
-                    <input type="text" placeholder="DESCRIBE YOUR ACTIVITY" class="description" class="input-container">
-                </div>
+                    <div class="creation-activity">
+                        <input 
+                        type="text" 
+                        placeholder="ACTIVITY NAME" 
+                        class="input-container"
+                        name = 'act-name'
+                        required>
+                        <input 
+                        type="datetime-local" 
+                        placeholder="DEADLINE" 
+                        class="input-container"
+                        name = 'deadline'
+                        required>
+                        <input 
+                        type="text" 
+                        placeholder="DESCRIBE YOUR ACTIVITY" 
+                        class="description input-container" 
+                        name="description"
+                        required>
+                    </div>
             </div>
         </div>
         <div class ="activity_div_2">
             
-            <div class = 'boxes_2'>
-                
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    проєкт для фпн
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    турніри з спорту
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    додаткові заняття
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    компанія на вечір
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    творчий проєкт
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    турніри з навчання
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    прогулянка
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    волейбол
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    it-зустріч
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    it-клуби
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    клуби
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    проєкт
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    футбол
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    мафія
-                </label>
-                <label class ='check_box_2'>
-                    <input type="checkbox" class="check_box_2">
-                    спорт
-                </label>
+            <form method="POST" id = 'check-box-form'>
+                <div class="act-div1">
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'fpn_proj'>
+                        <span class="glow-text">проєкт для фпн</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'sport_ch'>
+                        <span class="glow-text">турніри з спорту</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'additional'>
+                        <span class="glow-text">додаткові заняття</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'evening_comp'>
+                        <span class="glow-text">компанія на вечір</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'art_proj'>
+                        <span class="glow-text">творчий проєкт</span>
+                    </label>
+                </div>
+                <div class="act-div2">
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'learn_ch'>
+                        <span class="glow-text">турніри з навчання</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'walk'>
+                        <span class="glow-text">прогулянка</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'volleyball'>
+                        <span class="glow-text">волейбол</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'it_meeting'>
+                        <span class="glow-text">it-зустріч</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'it_clubs'>
+                        <span class="glow-text">it-клуби</span>
+                    </label>
+                </div>
+                <div class="act-div3">
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'clubs'>
+                        <span class="glow-text">клуби</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'proj'>
+                        <span class="glow-text">проєкт</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'football'>
+                        <span class="glow-text">футбол</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'mafia'>
+                        <span class="glow-text">мафія</span>
+                    </label>
+                    <label class ='check_box'>
+                        <input type="checkbox" class="check_box" name = 'sport'>
+                        <span class="glow-text">спорт</span>
+                    </label>
+                </div>
             </div>
-        <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi_bi_people_fill" viewBox="0 0 16 16">
+            <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi_bi_people_fill" viewBox="0 0 16 16">
                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
             </svg>
-            <input type="text" placeholder="SET LIMIT OF PARTICIPANCE" class="input-container">
+            <input type="number" placeholder="SET LIMIT OF PARTICIPANCE" class="input-container">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
                 <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
             </svg>
@@ -118,10 +136,11 @@
                 <span class="slider"></span>
             </label>
             <div class="create-btn">
-                <button type="button" id="createActivityBtn" class="create-btn">CREATE</button>
+                <button type="submit" id="createActivityBtn" class="create-btn">CREATE</button>
             </div>
         </div>
     </div>
+</form>
 
 
     <div id="photoModal" class="modal">
