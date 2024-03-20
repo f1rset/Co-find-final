@@ -42,13 +42,16 @@
 }
 
 .container {
+    font-family: sans-serif;
+    height: 80dvh;
     margin: auto;
-    margin-top: 1%;
+    margin-top: 3%;
     padding: 1px;
-    background-color: rgba(0, 0, 0, 0.7);
     width: 84%;
-    border-radius: 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    
+    background-color: rgba(255, 255, 255, 0.475);
+    border-radius: 4%;
 }
 
 .scrollcontainer {
@@ -63,7 +66,7 @@
 
 .fixed-text {
     margin-top: 3%;
-    color: #fff;
+    color: #020000;
     font-size: 26px;
     font-weight: bold;
     font-family: 'DM Sans', sans-serif;
@@ -82,12 +85,16 @@
 }
 
 .photo {
-    width: 80%;
-    height: 50%;
+    width: 60%;
+    aspect-ratio: 1/1;
     background-color: black;
     margin: auto;
     margin-top: 10%;
-    margin-left: 10%;
+    /* margin-left: 15%; */
+}
+.photo-block {
+    width: 90%;
+    aspect-ratio: 1/1;
 }
 
 .activity-name {
@@ -172,7 +179,4 @@
 .close-activity-btn{
     vertical-align: middle;
     margin-right: 10px;
-}
-.buttons-block {
-    display: flex;
 }

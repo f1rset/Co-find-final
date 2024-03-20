@@ -44,11 +44,13 @@
     text-align: center;
     margin-top: 3%;
     margin-left: 5%;
-    background-color: rgba(0, 0, 0, 0.7);
     width: 90%;
     padding: 20px;
-    border-radius: 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+
+    background-color: rgba(255, 255, 255, 0.475);
+    border-radius: 4%;
+    font-family: sans-serif;
 }
 .scrollcontainer {
     margin-top: 2.1%;
@@ -62,7 +64,7 @@
 }
 .fixed-text {
     margin-top: 25px;
-    color: #fff;
+    color: #020000;
     font-size: 26px;
     font-weight: bold;
     font-family: 'DM Sans', sans-serif;
@@ -91,7 +93,7 @@
 .photo {
     float: left;
     width: 35%;
-    height: auto;
+    aspect-ratio: 1/1;
     background-color: black;
 }
 .end-activity-btn {
@@ -104,7 +106,7 @@
 }
 
 .more-info-popup {
-    display: flex;
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -140,9 +142,4 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px; /* Adjust the margin as needed */
-}
-
-.test {
-    width: 20%;
-    display: flex;
 }

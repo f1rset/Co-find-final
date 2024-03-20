@@ -32,7 +32,7 @@
             {% for act in result_activities%}
             <div class="activity-in-progress" id="section1">
                 <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                    <img src="{{ act.image }}" alt="Activity Image" width="100%">
                 </div>
                 <div class="act-info">
                     <h1 class="activity-name">{{ act.name }}</h1>
@@ -46,7 +46,7 @@
             <div class="more-info-block" id="moreInfoPopup">
                 <div class="info-block">
                     <div class="popupimage">
-                        <img class="photo-block" src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                        <img class="photo-block" src="{{ act.image }}" alt="Activity Image" width="100%">
                     </div>
                     <div class="more-act-info">
                         <h1 class="activity-name-block">{{ act.name }}</h1>

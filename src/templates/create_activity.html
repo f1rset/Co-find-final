@@ -33,7 +33,7 @@
                 <div>
                 <a href="#" id="openModalBtn" class="activity-picture">
                     <img src="../static/images/default.jpg" alt="Default Image">
-                    <input type="hidden" name="image">
+                    <input type="hidden" id="imageInput" name="image">
                 </a>
                 </div>
                 <div>
@@ -222,6 +222,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const modalButton = document.getElementById('openModalBtn');
     const modal = document.getElementById('photoModal');
     const modalImage = modal.querySelector('img');
+    const imageInput = document.getElementById('imageInput');
 
     modalButton.addEventListener('click', function(event) {
         event.preventDefault();

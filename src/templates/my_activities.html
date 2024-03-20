@@ -35,7 +35,7 @@
             <div class="activity-in-progress" id="section1">
                 <div class="test">
                     <div class="photo">
-                        <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                        <img src="{{ act.image }}" alt="Activity Image" width="100%">
                     </div>
                     <div class="act-info">
                         <h1 class="activity-name">{{ act.name}}</h1>
@@ -75,7 +75,6 @@
                     </form>
                 </div>
             </div>
-            {% endfor %}
 
             <!-- <div class="activity-in-progress" id="section1">
                 <div class="test">
@@ -111,6 +110,7 @@
                 </div>
             </div> -->
         </div>
+        {% endfor %}
     </div>
         <script src="https://kit.fontawersome.com/a076d05399.js"></script>
         <script src="../static/test.js"></script>

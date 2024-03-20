@@ -45,15 +45,17 @@
     text-decoration: none;
 }
 .container {
-    height: 80dvh;
     text-align: center;
+    font-family: sans-serif;
+    height: 80dvh;
+    margin: auto;
     margin-top: 3%;
-    margin-left: 5%;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 90%;
-    padding: 20px;
-    border-radius: 50px;
+    padding: 1px;
+    width: 84%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    
+    background-color: rgba(255, 255, 255, 0.475);
+    border-radius: 4%;
 }
 .scrollcontainer {
     margin-top: 2.1%;
@@ -65,8 +67,8 @@
 }
 .fixed-text {
     margin-top: 25px;
-    color: #fff;
-    font-size: 35px;
+    color: #020000;
+    font-size: 26px;
     font-weight: bold;
     font-family: 'DM Sans', sans-serif;
     letter-spacing: 4px;
@@ -96,18 +98,6 @@
 
 
 /* ________________________________________ */
-
-
-
-.fixed-text {
-    margin-top: 10px;
-    color: #fff;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'DM Sans', sans-serif;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(79, 76, 76, 0.8);
-}
 
 .activity-in-progress,
 .activity-end {

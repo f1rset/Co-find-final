@@ -315,7 +315,12 @@ body{
 }
 
 .index_div p{
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
   margin-bottom: 5%;
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 0 0 5px#4e4b4b;
 }
 .index_div{
   display: block;
@@ -383,6 +388,7 @@ body{
 }
 
 .create-act-text{
+  text-align: center;
   margin-top: 30px;
   font-size: 30px;
   font-weight: 600;
