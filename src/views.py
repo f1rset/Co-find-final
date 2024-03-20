@@ -141,10 +141,37 @@ def home():
     return render_template('home_page.html', user = current_user,
                            result_activities=result_activities)
 
-@views.route('/my_activities')
+@views.route('/my_activities', methods = ['GET', 'POST'])
 @login_required
 def my_activities():
-    return render_template('my_activities.html', user = current_user)
+
+    if request.method == 'POST':
+        try:
+            act_id = int(request.form['confirm'].split(' ')[0])
+            user = request.form['confirm'].split(' ')[1]
+            activity = Activities.query.filter_by(id = act_id).first()
+            users = activity.users.copy()
+            users[user] = True
+            activity.users = users
+            db.session.commit()
+
+        except:
+            try:
+                act_id = int(request.form['delete'].split(' ')[0])
+                user = request.form['delete'].split(' ')[1]
+                activity = Activities.query.filter_by(id = act_id).first()
+                users = activity.users.copy()
+                users[user] = False
+                activity.users = users
+                db.session.commit()
+            except:
+                act_id = int(request.form['end'])
+                db.session.delete(Activities.query.filter_by(id = act_id).first())
+                db.session.commit()
+
+    my_act = Activities.query.filter_by(creator = current_user.username)
+    
+    return render_template('my_activities.html', user = current_user, my_act = my_act)
 
 @views.route('/my_schedule', methods = ['GET', 'POST'])
 @login_required

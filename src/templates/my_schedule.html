@@ -53,25 +53,27 @@
                         <p class="data-block">Deadline: {{ act.deadline }}</p>
                         <p class="description-block">{{ act.info }}</p>
                         <p class="participation-block">0 / {{ act.capacity }}</p>
+                        {% if act.users[current_user.username] %}
+                        <p class="participation-block" style="color: green;">Affirmed</p>
+                        {% else %}
+                        <p class="participation-block" style="color: red;">Not Affirmed</p>
+                        {% endif %}
                     </div>
                 </div>
-                {% with messages = get_flashed_messages(with_categories=false) %}
+                <!-- {% with messages = get_flashed_messages(with_categories=false) %}
                     {% for message in messages %}
                     {% if category == 'schedule-error' %}
                     <div class="alert-login alert alert-danger alter-dismissable fade show" role = "alert">
                       {{ message }}
-                      <!-- <button type="button" class="close" data-dismiss="alert">
-                        <span area-hidden = "true">&times;</span>
-                      </button> -->
                     </div>
                     {% endif %}
                     {% endfor %}
-                {% endwith %}
+                {% endwith %} -->
                 <div class="buttons-block">
                     <form method="post">
-                        <button class="close-activity-btn" onclick="closeMoreInfo()">close</button>
-                    <button class="leave-activity-btn" name = 'leave' value = '{{ act.id }}' onclick="leaveActivity()">leave</button>
+                        <button class="leave-activity-btn" name = 'leave' value = '{{ act.id }}'>leave</button>
                     </form>
+                    <button class="close-activity-btn" onclick="closeMoreInfo()">close</button>
                 </div>
             </div>
             {% endfor %}
@@ -134,11 +136,11 @@
 
         <script src="https://kit.fontawersome.com/a076d05399.js"></script>
         <script>
-            function openMoreInfo() {
-                document.getElementById('moreInfoPopup').style.display = 'block';
-            }
             function closeMoreInfo() {
                 document.getElementById('moreInfoPopup').style.display = 'none';
+            }
+            function openMoreInfo() {
+                document.getElementById('moreInfoPopup').style.display = 'block';
             }
             function leaveActivity() {
             var activityId = "123"; 

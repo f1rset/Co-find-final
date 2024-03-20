@@ -31,8 +31,53 @@
         <div class="fixed-text">MY CREATED ACTIVITIES</div>
 
         <div class="scrollcontainer">
-
+            {% for act in my_act %}
             <div class="activity-in-progress" id="section1">
+                <div class="test">
+                    <div class="photo">
+                        <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
+                    </div>
+                    <div class="act-info">
+                        <h1 class="activity-name">{{ act.name}}</h1>
+                        <p class="data">{{ act.deadline }}</p>
+                        <p class="description">{{ act.info }}</p>
+
+                    </div>
+                </div>
+                <div class="requests">
+                    <label for="members-section2">Запити на участь:</label>
+                    <div class="requests-container">
+                        <div class="members-requests">
+                            <form action="" method="post">
+                                {% for user, value in act.users.items() %}
+                                <div class="member">
+                                {% if value %}
+                                <p style="color: chartreuse;">{{ user }}</p><button type="submit" name = "delete" class="add-btn" value = "{{ act.id }} {{ user }}">DEL</button>
+                                {% else %}
+                                <p style="color: red;">{{ user }}</p><button type="submit" name = "confirm" class="add-btn" value = "{{ act.id }} {{ user }}">ADD</button>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                            </form>
+                            <!-- <div class="member">
+                                <p>request2</p><button class="add-btn">ADD</button>
+                            </div>
+                            <div class="member">
+                                <p>request3</p><button class="add-btn">ADD</button>
+                            </div>
+                            <div class="member">
+                                <p>request4</p><button class="add-btn">ADD</button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <form method="post">
+                    <button type = 'submit' value = '{{ act.id }}' name = 'end' class="end-activity-btn">End Activity</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- <div class="activity-in-progress" id="section1">
                 <div class="test">
                     <div class="photo">
                         <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
@@ -64,41 +109,7 @@
                     </div>
                     <button class="end-activity-btn">End Activity</button>
                 </div>
-            </div>
-
-            <div class="activity-in-progress" id="section1">
-                <div class="test">
-                    <div class="photo">
-                        <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                    </div>
-                    <div class="act-info">
-                        <h1 class="activity-name">activity name</h1>
-                        <p class="data">реченець триває</p>
-                        <p class="description">опис події, час, вимоги</p>
-
-                    </div>
-                </div>
-                <div class="requests">
-                    <label for="members-section2">Запити на участь:</label>
-                    <div class="requests-container">
-                        <div class="members-requests">
-                            <div class="member">
-                                <p>request1</p><button class="add-btn">ADD</button>
-                            </div>
-                            <div class="member">
-                                <p>request2</p><button class="add-btn">ADD</button>
-                            </div>
-                            <div class="member">
-                                <p>request3</p><button class="add-btn">ADD</button>
-                            </div>
-                            <div class="member">
-                                <p>request4</p><button class="add-btn">ADD</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="end-activity-btn">End Activity</button>
-                </div>
-            </div>
+            </div> -->
         </div>
     </div>
         <script src="https://kit.fontawersome.com/a076d05399.js"></script>

@@ -65,18 +65,20 @@
                 <div class="photo">
                     <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
                 </div>
+                <!-- Add a "Join" button -->
                 <div class="act-info">
                     <h1 class="activity-name">{{ act.name }}</h1>
                     <p class="data">{{ act.deadline.strftime('%Y-%m-%d %H:%M') }}</p>
                     <p class="description">{{ act.info }}</p>
                     <p class="description">0 / 20</p>
+                    </div>
+                    <div class="test">
+                    <form class= '' action="" method="post">
+                        <button type = 'submit' name = 'join' class="join-activity-btn" value="{{ act.id }}">Join</button>
+                    </form>
+                    <button onclick="closeMoreInfo()">Close</button>
+                    </div>
                 </div>
-                <!-- Add a "Join" button -->
-                <form action="" method="post">
-                    <button type = 'submit' name = 'join' class="join-activity-btn" value="{{ act.id }}">Join</button>
-                </form>
-                <button onclick="closeMoreInfo()">Close</button>
-            </div>
             {% endfor %}
         
 
