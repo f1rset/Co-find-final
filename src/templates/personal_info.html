@@ -27,101 +27,108 @@
     <section></section>
 
     <div class="grid-container">
+        <p class="create-act-text">MY INFO</p>
+        <div class="scroll-container">
         <div class="index_div">
-            <p>MY INFO</p>
             <!-- <label>NAME</label> -->
+            <div class="info_user">
+                <p class="titleinfo">Username</p>
+                <p class="information">{{ current_user.username }}</p>
+                <p class="titleinfo">Email</p>
+                <p class="information">{{ current_user.email }}</p>
+            </div>
             <form id='name-form' class="login-form-main" method = 'POST'>
+                <p class="titleinfo">Change password</p>
                 <input type="password" placeholder="OLD PASSWORD" name='old_password' class="login-form-main-input">
                 <input type="password" placeholder="NEW PASSWORD" name='new_password' class="login-form-main-input">
-                {% with messages = get_flashed_messages(with_categories=false) %}
+                {% with messages = get_flashed_messages(with_categories=true) %}
                     {% for message in messages %}
-                        {% if category == 'error' %}
-                        <div class="alert-login alert alert-danger alter-dismissable fade show" role = "alert">
-                          {{ message }}
-                        </div>
-                        {% else %}
-                        <div class="alert-login alert alert-success alter-dismissable fade show" role = "alert">
-                          {{ message }}
-                        </div>
-                        {% endif %}
+                    {% if message[0] == 'pas-error' %}
+                    <div class="alert-login alert alert-danger alter-dismissable fade show" style="margin-top: 2%;" role = "alert">
+                      {{ message[1] }}
+                    </div>
+                    {% elif message[0] == 'pas-success' %}
+                    <div class="alert-login alert alert-success alter-dismissable fade show" style="margin-top: 2%;" role = "alert">
+                      {{ message[1] }}
+                    </div>
+                    {% endif %}
                     {% endfor %}
                 {% endwith %}
                 <button id = 'name-form' type="submit" class="setup-btn">SET UP</button>
             </form>
         </div>
-        <div class ="activity_div">
-            <div class="activities-h">Select or change an activity</div>
-            <div class="activities-pos">
-                <form method="POST" id = 'check-box-form'>
-                <div class="act-div1">
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'fpn_proj'>
-                        <span class="glow-text">проєкт для фпн</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'sport_ch'>
-                        <span class="glow-text">турніри з спорту</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'additional'>
-                        <span class="glow-text">додаткові заняття</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'evening_comp'>
-                        <span class="glow-text">компанія на вечір</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'art_proj'>
-                        <span class="glow-text">творчий проєкт</span>
-                    </label>
-                </div>
-                <div class="act-div2">
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'learn_ch'>
-                        <span class="glow-text">турніри з навчання</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'walk'>
-                        <span class="glow-text">прогулянка</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'volleyball'>
-                        <span class="glow-text">волейбол</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'it_meeting'>
-                        <span class="glow-text">it-зустріч</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'it_clubs'>
-                        <span class="glow-text">it-клуби</span>
-                    </label>
-                </div>
-                <div class="act-div3">
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'clubs'>
-                        <span class="glow-text">клуби</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'proj'>
-                        <span class="glow-text">проєкт</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'football'>
-                        <span class="glow-text">футбол</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'mafia'>
-                        <span class="glow-text">мафія</span>
-                    </label>
-                    <label class ='check_box'>
-                        <input type="checkbox" class="check_box" name = 'sport'>
-                        <span class="glow-text">спорт</span>
-                    </label>
-                </div>
+        <div class="activity-field">
+        <div class="activities-h">Select or change an activity</div>
+        <div class="activities-pos">
+            <form method="POST" class="check-box-form" id = 'check-box-form'>
+            <div class="act-div">
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'fpn_proj'>
+                    <span class="glow-text">проєкт для фпн</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'sport_ch'>
+                    <span class="glow-text">турніри з спорту</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'additional'>
+                    <span class="glow-text">додаткові заняття</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'evening_comp'>
+                    <span class="glow-text">компанія на вечір</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'art_proj'>
+                    <span class="glow-text">творчий проєкт</span>
+                </label>
+                <!-- ----------- -->
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'learn_ch'>
+                    <span class="glow-text">турніри з навчання</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'walk'>
+                    <span class="glow-text">прогулянка</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'volleyball'>
+                    <span class="glow-text">волейбол</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'it_meeting'>
+                    <span class="glow-text">it-зустріч</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'it_clubs'>
+                    <span class="glow-text">it-клуби</span>
+                </label>
+                <!-- ----------- -->
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'clubs'>
+                    <span class="glow-text">клуби</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'proj'>
+                    <span class="glow-text">проєкт</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'football'>
+                    <span class="glow-text">футбол</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'mafia'>
+                    <span class="glow-text">мафія</span>
+                </label>
+                <label class ='check_box'>
+                    <input type="checkbox" class="check_box" name = 'sport'>
+                    <span class="glow-text">спорт</span>
+                </label>
             </div>
-            <button type="submit" class="setup-btn create-btn">SET UP</button>
-        </form>
+        </div>
+            <button type="submit" class="create-btn">SET UP</button>
+            </form>
+        </div>
         </div>
         <script src="https://kit.fontawersome.com/a076d05399.js"></script>
     </body>

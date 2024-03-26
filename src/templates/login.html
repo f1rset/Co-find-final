@@ -10,7 +10,7 @@
   <body class="loginsignup">
     <div class="login-page-main">
       <div class="login-div">
-        <div class="login-h"><a href="/" class="login-h">Co-Find</a></div>
+        <div class="login-h"><a href="/" class="login-h">CO-FIND</a></div>
         <div class="login-h">Log In</div>
         <div class="login-txt">
           First time? <a href="/signup"> Sign Up</a>
@@ -28,18 +28,18 @@
           id="password"
           name="password"
           placeholder="Password">
-          {% with messages = get_flashed_messages(with_categories=false) %}
+          {% with messages = get_flashed_messages(with_categories=true) %}
             {% for message in messages %}
-            {% if category == 'error' %}
-            <div class="alert-login alert alert-danger alter-dismissable fade show" role = "alert">
-              {{ message }}
+            {% if message[0] == 'error-log' %}
+            <div class="alert alert-danger alter-dismissable fade show" style="margin-top: 2%;" role = "alert">
+              {{ message[1] }}
               <!-- <button type="button" class="close" data-dismiss="alert">
                 <span area-hidden = "true">&times;</span>
               </button> -->
             </div>
-            {% else %}
-            <div class="alert alert-success alter-dismissable fade show" role = "alert">
-              {{ message }}
+            {% elif message[0] == 'success-log' %}
+            <div class="alert alert-success alter-dismissable fade show" style="margin-top: 2%;" role = "alert">
+              {{ message[1] }}
               <!-- <button type="button" class="close" data-dismiss="alert">
                 <span area-hidden = "true">&times;</span>
               </button> -->
@@ -47,7 +47,7 @@
             {% endif %}
             {% endfor %}
           {% endwith %}
-          <button type="submit">Login</button>
+          <button class="setup-btn" type="submit">Login</button>
         </form>
       </div>
     </div>

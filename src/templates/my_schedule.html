@@ -31,8 +31,8 @@
         <div class="scrollcontainer">
             {% for act in result_activities%}
             <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="{{ act.image }}" alt="Activity Image" width="100%">
+                <div class="photo-act-schedule">
+                    <img src="{{ act.image }}" class="photo-act" alt="Activity Image" width="100%">
                 </div>
                 <div class="act-info">
                     <h1 class="activity-name">{{ act.name }}</h1>
@@ -43,7 +43,7 @@
 
 
             
-            <div class="more-info-block" id="moreInfoPopup">
+            <div class="more-info-block" id="moreInfoPopup" style="display: none;">
                 <div class="info-block">
                     <div class="popupimage">
                         <img class="photo-block" src="{{ act.image }}" alt="Activity Image" width="100%">
@@ -60,76 +60,16 @@
                         {% endif %}
                     </div>
                 </div>
-                <!-- {% with messages = get_flashed_messages(with_categories=false) %}
-                    {% for message in messages %}
-                    {% if category == 'schedule-error' %}
-                    <div class="alert-login alert alert-danger alter-dismissable fade show" role = "alert">
-                      {{ message }}
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                {% endwith %} -->
                 <div class="buttons-block">
+                    <div class="two_buttons">
                     <form method="post">
                         <button class="leave-activity-btn" name = 'leave' value = '{{ act.id }}'>leave</button>
                     </form>
                     <button class="close-activity-btn" onclick="closeMoreInfo()">close</button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
-            <!-- <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                </div>
-                <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
-                </div>
-            </div>
-
-            <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                </div>
-                <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
-                </div>
-            </div>
-
-
-            <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                </div>
-                <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
-                </div>
-            </div>
-            <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                </div>
-                <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
-                </div>
-            </div>
-            <div class="activity-in-progress" id="section1">
-                <div class="photo">
-                    <img src="../static/images/performance.jpg" alt="Activity Image" width="100%">
-                </div>
-                <div class="act-info">
-                    <h1 class="activity-name">activity name</h1>
-                    <p class="data">реченець</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
-                </div>
-            </div> -->
 
         </div>
     </div>

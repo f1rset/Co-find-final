@@ -45,31 +45,30 @@
     margin-top: 3%;
     margin-left: 5%;
     width: 90%;
-    padding: 20px;
+    padding: 3%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 
     background-color: rgba(255, 255, 255, 0.475);
-    border-radius: 4%;
+    border-radius: 50px;
     font-family: sans-serif;
 }
 .scrollcontainer {
-    margin-top: 2.1%;
     background-color: rgba(0, 0, 0, 0);
     width: 95%;
-    height: 70dvh;
+    height: 65dvh;
     padding: 15px;
     border-radius: 50px;
-    overflow-y: scroll;
+    overflow-y: auto;
     margin-bottom: 2.1%;
 }
 .fixed-text {
-    margin-top: 25px;
     color: #020000;
-    font-size: 26px;
-    font-weight: bold;
+    text-align: center;
     font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
     letter-spacing: 4px;
-    text-shadow: 2px 2px 4px rgba(79, 76, 76, 0.8); 
+    font-weight: 600;
+    text-shadow: 0 0 5px#4e4b4b;
 }
 .activity-in-progress, .activity-end {
     margin-bottom: 20px;
@@ -141,5 +140,5 @@
 .more-info-popup button {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px;
 }

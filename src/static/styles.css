@@ -12,6 +12,8 @@ nav{
   width: 100%;
 }
 label.logo {
+  letter-spacing: 3px;
+  font-family: 'DM Sans', sans-serif;
   color: white;
   font-size:35px;
   line-height: 80px;
@@ -33,6 +35,7 @@ nav ul li{
   text-align: center;
 }
 nav ul li a{
+  font-family: 'DM Sans', sans-serif;
   text-decoration: none;
   color: white;
   font-size: 11px;
@@ -96,38 +99,49 @@ a.active,a:hover{
   }
 }
 .head{
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   margin: auto;
   display: flex;
   height: 100px;
 }
 
 .logo-main{
-  margin-right: 2%;
+  letter-spacing: 5.5px;
+  font-family: 'DM Sans', sans-serif;
   color: white;
-  text-align: center;
-  font-size: 50px;
+  line-height: 80px;
+  font-weight: bold;
+  margin-right: 2%;
+  text-align: left;
+  font-size: 55px;
   justify-content: center;
-  margin-top: 0.5%;
+  margin-top: 1.5%;
 }
 
 .line{
   background-color: white;
   height: 3px;
-  width: 100%;
-  margin-left: 3%;
+  width: 95%;
+  margin-left: 2%;
   margin-top: 1%;
 }
 
 .login-main{
+  margin-top: 2%;
+  margin-bottom: 1%;
   text-align: left;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 27px;
+  font-weight: bold;
   color: white;
-  margin-left: 3%;
 }
 
 .login-bnt-main{
+  margin-right: 2%;
+  margin-left: 2%;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: bold;
   text-decoration: none;
   color: white;
 }
@@ -137,32 +151,38 @@ a.active,a:hover{
 }
 
 .main-page{
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-top: 3%;
+  padding-bottom: 3%;
   margin: auto;
   margin-top: 6%;
   width: 60%;
   box-shadow:
   0.3em 0.3em 1em rgb(0 0 0 / 60%);
+  font-family: "Monaco", monospace;
 }
 
 .head-h{
+  font-weight: 600;
+  position: relative;
   text-align: center;
   color: white;
-  font-size: 60px;
+  font-size: 43px;
 }
 
 .head-txt{
+  font-family: 'DM Sans', sans-serif;
   color: white;
-  font-size: 40px;
+  font-size: 25px;
   margin: auto;
   margin-left: 2%;
+  margin-top: 3dvb;
 }
 
 .login-page-main{
   background-color: rgba(255, 255, 255, 0.5);
   margin: auto;
-  margin-top: 1%;
-  margin-bottom: 3%;
+  margin-top: 3%;
   height: fit-content(20em);
   width: 30%;
   border-radius: 70px;
@@ -173,19 +193,25 @@ a.active,a:hover{
 .login-div{
   color: black;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-  width: 50%;
   position: relative;
   text-align: center;
-  margin: auto;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 3%;
   margin-bottom: 10%;
 }
 
 .login-h{
   text-decoration: none;
-  font-size: 60px;
+  font-size: 35px;
   margin-top: 10%;
   color: #000;
+}
+
+a.login-h {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 60px;
 }
 
 .login-inputs{
@@ -200,22 +226,10 @@ a.active,a:hover{
   margin-bottom: 2%;
 }
 
-.login-form-main button {
-  display: inline-block;
-  width: 100%;
-  padding: 10px;
-  background-color: #000;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 3%;
+.login-form-main {
+  padding-left: 3%;
+  flex: 1.5;
 }
-
 .login-form-main button:hover {
   background-color: #333;
 }
@@ -265,34 +279,41 @@ body{
   margin-right: 40%;
   margin-top: 89px;
 }
-
 .grid-container {
+  height: 80dvh;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  background-color: rgba(255, 255, 255, 0.475);
-  border-radius: 4%;
-  text-align: left;
   padding: 3%;
   padding-right: 3%;
   font-size: 30px;
-  width: 80%;
-  margin: auto;
-  margin-top: 2%;
-  color: rgb(2, 0, 0);
+  width: 90%;
+
+
   font-family: sans-serif;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, ), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  margin-top: 3%;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  
+  background-color: rgba(255, 255, 255, 0.475);
+  border-radius: 50px;
 }
 
 .activity_div {
   display: inline;
-  margin-left: 4%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
+::placeholder{
+  color: #000;
+}
 .login-form-main-input {
-  width: 100%;
+  width: 70%;
   font-size:medium;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid #000000b3;
   border-radius: 5px;
   box-sizing: border-box;
@@ -302,7 +323,22 @@ body{
 }
 
 .login-form-main .setup-btn {
-  width: 50%;
+  display: inline-block;
+  /* margin-right: 50%; */
+  margin-top: 5%;
+  width: 150px;
+  height: 40px;
+  background-color: #000;
+  color: #ffffff;
+  font-size: 14.5px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .logo{
@@ -315,53 +351,54 @@ body{
 }
 
 .index_div p{
-  text-align: center;
+  color: #020000;
   font-family: 'DM Sans', sans-serif;
   margin-bottom: 5%;
   font-size: 30px;
-  font-weight: 600;
-  text-shadow: 0 0 5px#4e4b4b;
+  letter-spacing: 4px;
 }
 .index_div{
-  display: block;
+  display: flex;
 }
 .check_box {
   display: inline-block;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   margin-top: 5px;
-  background-color: #7f7f7f;
-  padding: 0px 7px;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .check_box input {
   display: none;
 }
-
+.buttons {
+  align-items: center;
+  display: flex;
+  gap: 40%;
+}
 .glow-text {
   font-size: 20px;
-  color: #ffffff;
+  color: #000;
   transition: text-shadow 0.3s ease;
 }
-
+.two_buttons {
+  display: flex;
+}
 .check_box input:checked + .glow-text {
-  text-shadow: 0 0 5px #fff700, 0 0 10px #fff700, 0 0 15px #fff700, 0 0 20px #fff700;
+  text-shadow: 0 0 5px #cde8f2, 0 0 10px #a0e4ff, 0 0 15px #75d2f7, 0 0 20px #16bdff;
 }
 .activities-pos{
   display: flex;
 }
-.act-div1{
-  margin-top: 30px;
-  display: inline;
+.activities-h {
+  font-size: 20px;
+  margin: 0;
+  text-shadow: 0 0 5px#4e4b4b;
+  font-weight: 600;
 }
-.act-div2{
-  margin-top: 30px;
-  display: inline;
-}
-.act-div3{
+.act-div{
   margin-top: 30px;
   display: inline;
 }
@@ -388,13 +425,17 @@ body{
 }
 
 .create-act-text{
+  color: #020000;
+  letter-spacing: 4px;
+  margin-bottom: 3%;
   text-align: center;
-  margin-top: 30px;
   font-size: 30px;
   font-weight: 600;
   text-shadow:0 0 5px#4e4b4b;
 }
-
+.input-info {
+  flex: auto;
+}
 .info {
   display: flex;
   grid-template-columns: repeat(2, 220px);
@@ -458,18 +499,35 @@ body{
     border-radius: 5px;
     box-sizing: border-box;
   }
-  
+  .input-container {
+    width: 100%;
+    font-size: medium;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #000000b3;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .scroll-container {
+    height: 57dvh;
+    overflow-y: auto;
+  }
   .creation-activity .description {
     width: 90%;
+    font-size: medium;
     height: 20dvb;
-    margin-bottom: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid #000000b3;
     border-radius: 5px;
     box-sizing: border-box;
   }
   
   .activity_div_2 {
-    display: grid;
+    margin-top: 3%;
+    width: 50%;
     grid-template-columns: repeat(2, 450px);
   }
   .boxes_2{
@@ -480,7 +538,7 @@ body{
   }
 
   .icons .input-container{
-    width: 200px;
+    width: 30%;
     height: 40px;
     margin-bottom: 15px;
     border: 2px solid #000000b3;
@@ -489,9 +547,8 @@ body{
     text-align: center;
   }
   .description {
-    height: 150px;
+    width: 100%;
   }
-
   .modal {
     display: none;
     position: fixed;
@@ -519,8 +576,8 @@ body{
 }
 
 .modal-content .gallery img {
-    width: 200px;
-    height: 200px;
+    width: 25dvb;
+    height: 25dvb;
     cursor: pointer;
 }
 
@@ -537,10 +594,13 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
-
+.lower-create-box {
+  display: flex;
+}
 .icons{
+  padding-left: 5%;
+  width: 50%;
   display: grid;
-  grid-template-columns: repeat(1, 30px);
   gap: 20px;
 }
 
@@ -594,15 +654,17 @@ body{
 
 .create-btn{
   display: inline-block;
-  width: 200px;
+  width: 150px;
   height: 40px;
   background-color: #000;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14.5px;
   text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
   text-decoration: none;
   border: none;
-  border-radius: 11px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -612,13 +674,10 @@ body{
 .create-act{
   display: flex;
 }
-.icons{
-justify-content: center;
-}
 .activity-picture {
   display: inline-block;
-  width: 60vb;
-  height: 50vb;
+  width: 40vb;
+  height: 40vb;
   position: relative;
   overflow: hidden;
 }
@@ -626,4 +685,38 @@ justify-content: center;
 .activity-picture img {
   width: 100%;
   height: 100%;
+}
+.info_user {
+  flex: auto;
+  padding-left: 5%;
+}
+.titleinfo {
+  font-size: 17px !important;
+  margin: 0 !important;
+  text-shadow: 0 0 5px#4e4b4b !important;
+  font-weight: 600 !important;
+}
+.information {
+  font-size: 15px !important;
+  width: 70% !important;
+  font-size: medium !important;
+  padding: 10px !important;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid #000000b3 !important;
+  border-radius: 5px !important;
+  box-sizing: border-box !important;
+}
+.activity-field {
+  padding-left: 5%;
+}
+.photo-act-schedule {
+  display: flex;
+  align-items: center;
+}
+.photo-act {
+  flex: 100%;
+  width: 33dvb;
+  height: 33dvb;
 }

@@ -36,12 +36,12 @@ def login():
 
         if user:
             if check_password_hash(user.password, password):
-                flash('Logged in successfully!', category = 'success')
+                flash('Logged in successfully!', category = 'success-log')
                 login_user(user, remember=True)
                 return redirect(url_for('views.home'))
-            flash('Incorect password, try again!', category='error')
+            flash('Incorect password, try again!', category='error-log')
         else:
-            flash('Username does not exist.', category='error')
+            flash('Username does not exist.', category='error-log')
     return render_template('/login.html')
 
 @auth.route('/logout')
@@ -67,19 +67,19 @@ def signup():
         user_mail = User.query.filter_by(email = email).first()
         matcher = False
         if user:
-            flash('Username already exists!', category='error')
+            flash('Username already exists!', category='error-log')
         elif user_mail:
-            flash('This email already in use!', category='error')
+            flash('This email already in use!', category='error-log')
         elif matcher:
-            flash('This is not UCU email!', category='error')
+            flash('This is not UCU email!', category='error-log')
         elif len(email) < 4:
-            flash('Email must be greater than 4 characters.', category='error')
+            flash('Email must be greater than 4 characters.', category='error-log')
         elif len(username) < 2:
-            flash('Username must be greater than 2 characters.', category='error')
+            flash('Username must be greater than 2 characters.', category='error-log')
         elif password1 != password2:
             flash('Passwowrds don\'t match.')
         elif len(password1) < 7:
-            flash('Password must be greater than 7 characters.', category='error')
+            flash('Password must be greater than 7 characters.', category='error-log')
         else:
             #adding user to database
             new_user = User(
@@ -91,7 +91,7 @@ def signup():
                 )
             db.session.add(new_user)
             db.session.commit()
-            flash('Account created', category='success')
+            flash('Account created', category='success-log')
             return redirect(url_for('auth.login'))
 
     return render_template('/signup.html')

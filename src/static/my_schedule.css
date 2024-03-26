@@ -23,7 +23,6 @@
     float: left;
     font-family: 'DM Sans', sans-serif;
     letter-spacing: 3px;
-    margin-left: -2%;
 }
 
 .pages {
@@ -46,12 +45,12 @@
     height: 80dvh;
     margin: auto;
     margin-top: 3%;
-    padding: 1px;
-    width: 84%;
+    padding: 3%;
+    width: 90%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     
     background-color: rgba(255, 255, 255, 0.475);
-    border-radius: 4%;
+    border-radius: 50px;
 }
 
 .scrollcontainer {
@@ -59,29 +58,24 @@
     height: inherit;
     overflow-x: auto;
     white-space: nowrap;
-    margin-top: 3%;
-    margin-left: 2.1%;
-    margin-bottom: 8%;
 }
 
 .fixed-text {
-    margin-top: 3%;
-    color: #020000;
-    font-size: 26px;
-    font-weight: bold;
-    font-family: 'DM Sans', sans-serif;
-    letter-spacing: 4px;
-    text-shadow: 2px 2px 4px rgba(114, 114, 114, 0.8); 
     text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 3%;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 0 0 5px#4e4b4b;
+    letter-spacing: 4px;
 }
 
 .activity-in-progress{
     background-color: rgba(255, 255, 255, 0.6);
-    width: 360px;
+    padding: 3%;
     height: 75%;
     display: inline-block;
     margin-right: 5%;
-    /* padding-bottom: 2%; */
 }
 
 .photo {
@@ -90,7 +84,6 @@
     background-color: black;
     margin: auto;
     margin-top: 10%;
-    /* margin-left: 15%; */
 }
 .photo-block {
     width: 90%;
@@ -126,22 +119,23 @@
 }
 
 .more-info-block {
-    display: inline;
+    display: none;
     position: fixed;
-    width: 90%;
-    height: 70%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 3%;
-    background-color: rgb(164, 164, 164);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(37, 37, 37, 0.7);
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     z-index: 2;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 80%;
+    max-height: 80%;
     overflow: auto;
+    color: black;
     font-family: 'DM Sans', sans-serif;
+
+    background-color: white;
+    border: 1px solid #ccc;
 }
 
 .info-block {

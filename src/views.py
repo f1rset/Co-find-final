@@ -47,9 +47,9 @@ def personal_info():
                 if check_password_hash(user.password, old_password):
                     user.password = generate_password_hash(new_password)
                     db.session.commit()
-                    flash('Your password has been changed', category = 'success')
+                    flash('Your password has been changed!', category = 'pas-success')
                 else:
-                    flash('Old password does not match!', category = 'error')
+                    flash('Old password does not match!', category = 'pas-error')
 
         except KeyError:
             #adding tags
@@ -90,7 +90,10 @@ Please enter in the format YYYY-MM-DDTHH:MM.', category="act-error")
             else:
                 tags[i] = False
 
-        capacity = int(request.form.get('capacity'))
+        try:
+            capacity = int(request.form.get('capacity'))
+        except ValueError:
+            capacity = -1
         comments = request.form.get('comments')== 'on'
         users = {}
 
@@ -170,7 +173,7 @@ def my_activities():
                 db.session.commit()
 
     my_act = Activities.query.filter_by(creator = current_user.username)
-    
+
     return render_template('my_activities.html', user = current_user, my_act = my_act)
 
 @views.route('/my_schedule', methods = ['GET', 'POST'])

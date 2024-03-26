@@ -10,7 +10,7 @@
 <body class="loginsignup">
     <div class="login-page-main">
       <div class="login-div">
-        <div class="login-h"><a href="/" class="login-h">Co-Find</a></div>
+        <div class="login-h"><a href="/" class="login-h">CO-FIND</a></div>
         <div class="login-h">Register</div>
         <div class="login-txt">
           Already registered? <a href="/login"> Log In</a>
@@ -44,20 +44,20 @@
           name="password2"
           placeholder="Confirm Password"
           />
-          {% with messages = get_flashed_messages(with_categories=false) %}
+          {% with messages = get_flashed_messages(with_categories=true) %}
             {% for message in messages %}
-            {% if category == 'error' %}
-            <div class="alert-login alert alert-danger alter-dismissable fade show" role = "alert">
-              {{ message }}
+            {% if message[0] == 'error-log' %}
+            <div style="margin-top: 2%;" class="alert-login alert alert-danger alter-dismissable fade show" role = "alert">
+              {{ message[1] }}
             </div>
-            {% elif category == 'success' %}
-            <div class="alert alert-success alter-dismissable fade show" role = "alert">
-              {{ message }}
+            {% elif message[0] == 'success-log' %}
+            <div style="margin-top: 2%;" class="alert alert-success alter-dismissable fade show" role = "alert">
+              {{ message[1] }}
             </div>
             {% endif %}
             {% endfor %}
           {% endwith %}
-          <button type="submit">Sign up</button>
+          <button class="setup-btn" type="submit">Sign up</button>
         </form>
       </div>
     </div>

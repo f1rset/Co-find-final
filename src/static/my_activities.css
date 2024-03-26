@@ -50,29 +50,29 @@
     height: 80dvh;
     margin: auto;
     margin-top: 3%;
-    padding: 1px;
-    width: 84%;
+    padding: 3%;
+    width: 90%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     
     background-color: rgba(255, 255, 255, 0.475);
-    border-radius: 4%;
+    border-radius: 50px;
 }
 .scrollcontainer {
     margin-top: 2.1%;
     background-color: rgba(0, 0, 0, 0);
     width: 95%;
-    height: 65dvh;
+    height: 55dvh;
     padding: 15px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .fixed-text {
-    margin-top: 25px;
-    color: #020000;
-    font-size: 26px;
-    font-weight: bold;
+    text-align: center;
     font-family: 'DM Sans', sans-serif;
+    margin-bottom: 5%;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 0 0 5px#4e4b4b;
     letter-spacing: 4px;
-    text-shadow: 2px 2px 4px rgba(79, 76, 76, 0.8); 
 }
 .activity-in-progress, .activity-end {
     display: flex;
@@ -104,7 +104,7 @@
     display: flex;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 5px rgba(6, 5, 5, 0.1);
 }
 
@@ -131,11 +131,14 @@
     text-align: center;
 }
 .requests {
-    margin-top: auto;
+    padding-top: 5%;
     flex: 1;
     text-align: center;
 }
-
+.photo-my-act {
+    height: 25dvb;
+    width: 25dvb;
+}
 .members,
 .members-requests,
 .members-precense {

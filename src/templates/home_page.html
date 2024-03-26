@@ -73,10 +73,12 @@
                     <p class="description">0 / 20</p>
                     </div>
                     <div class="test">
-                    <form class= '' action="" method="post">
-                        <button type = 'submit' name = 'join' class="join-activity-btn" value="{{ act.id }}">Join</button>
-                    </form>
-                    <button onclick="closeMoreInfo()">Close</button>
+                        <div class="two_buttons">
+                        <form class= '' action="" method="post">
+                            <button type = 'submit' name = 'join' class="join-activity-btn" value="{{ act.id }}">Join</button>
+                        </form>
+                        <button onclick="closeMoreInfo()">Close</button>
+                        </div>
                     </div>
                 </div>
             {% endfor %}
