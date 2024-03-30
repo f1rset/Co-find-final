@@ -32,21 +32,21 @@
             {% for act in result_activities%}
             <div class="activity-in-progress" id="section1">
                 <div class="photo-act-schedule">
-                    <img src="{{ act.image }}" class="photo-act" alt="Activity Image" width="100%">
+                    <img src="{{ act.image }}" class="photo-block" alt="Activity Image">
                 </div>
                 <div class="act-info">
-                    <h1 class="activity-name">{{ act.name }}</h1>
+                    <h1 class="activity-name">{{ act.name[:20] }}</h1>
                     <p class="data">Deadline: {{ act.deadline }}</p>
-                    <button class="more-info-btn" onclick="openMoreInfo()">More info</button>
+                    <button class="more-info-btn" onclick="openMoreInfo('{{ act.id }}')">More info</button>
                 </div>
             </div>
 
 
-            
-            <div class="more-info-block" id="moreInfoPopup" style="display: none;">
+
+            <div class="more-info-block" id="{{ act.id }}" style="display: none;">
                 <div class="info-block">
                     <div class="popupimage">
-                        <img class="photo-block" src="{{ act.image }}" alt="Activity Image" width="100%">
+                        <img class="photo-block" src="{{ act.image }}" alt="Activity Image">
                     </div>
                     <div class="more-act-info">
                         <h1 class="activity-name-block">{{ act.name }}</h1>
@@ -65,7 +65,7 @@
                     <form method="post">
                         <button class="leave-activity-btn" name = 'leave' value = '{{ act.id }}'>leave</button>
                     </form>
-                    <button class="close-activity-btn" onclick="closeMoreInfo()">close</button>
+                    <button class="close-activity-btn" onclick="closeMoreInfo('{{ act.id }}')">close</button>
                     </div>
                 </div>
             </div>
@@ -76,14 +76,14 @@
 
         <script src="https://kit.fontawersome.com/a076d05399.js"></script>
         <script>
-            function closeMoreInfo() {
-                document.getElementById('moreInfoPopup').style.display = 'none';
+            function closeMoreInfo(actid) {
+                document.getElementById(actid).style.display = 'none';
             }
-            function openMoreInfo() {
-                document.getElementById('moreInfoPopup').style.display = 'block';
+            function openMoreInfo(actid) {
+                document.getElementById(actid).style.display = 'block';
             }
             function leaveActivity() {
-            var activityId = "123"; 
+            var activityId = "123";
             alert("You have left the activity with ID: " + activityId);
             }
         </script>

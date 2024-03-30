@@ -58,10 +58,10 @@
                     <p class="data">{{ act.deadline.strftime('%Y-%m-%d %H:%M') }}</p>
                     <p class="description">{{ act.info[:20] }}...</p>
                     <p class="description">0 / {{ act.capacity }}</p>
-                    <button class="end-activity-btn" onclick="openMoreInfo()">More info</button>
+                    <button class="end-activity-btn" onclick="openMoreInfo('{{ act.id }}')">More info</button>
                 </div>
             </div>
-            <div class="more-info-popup" id="moreInfoPopup">
+            <div class="more-info-popup" id="{{ act.id }}">
                 <div class="photo">
                     <img src="{{ act.image }}" alt="Activity Image" width="100%">
                 </div>
@@ -71,18 +71,18 @@
                     <p class="data">{{ act.deadline.strftime('%Y-%m-%d %H:%M') }}</p>
                     <p class="description">{{ act.info }}</p>
                     <p class="description">0 / 20</p>
-                    </div>
-                    <div class="test">
-                        <div class="two_buttons">
-                        <form class= '' action="" method="post">
-                            <button type = 'submit' name = 'join' class="join-activity-btn" value="{{ act.id }}">Join</button>
-                        </form>
-                        <button onclick="closeMoreInfo()">Close</button>
-                        </div>
+                </div>
+                <div class="test">
+                    <div class="two_buttons">
+                    <form class= '' action="" method="post">
+                        <button type = 'submit' name = 'join' class="join-activity-btn" value="{{ act.id }}">Join</button>
+                    </form>
+                    <button onclick="closeMoreInfo('{{ act.id }}')">Close</button>
                     </div>
                 </div>
+            </div>
             {% endfor %}
-        
+
 
            <!--  <div class="activity-in-progress" id="section1">
                 <div class="photo">
@@ -127,12 +127,12 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
         // JavaScript functions to open and close the smaller window
-        function openMoreInfo() {
-            document.getElementById('moreInfoPopup').style.display = 'block';
+        function openMoreInfo(actid) {
+            document.getElementById(actid).style.display = 'block';
         }
 
-        function closeMoreInfo() {
-            document.getElementById('moreInfoPopup').style.display = 'none';
+        function closeMoreInfo(actid) {
+            document.getElementById(actid).style.display = 'none';
         }
 
         // JavaScript function to join the activity

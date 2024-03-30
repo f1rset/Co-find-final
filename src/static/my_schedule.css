@@ -48,7 +48,7 @@
     padding: 3%;
     width: 90%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    
+
     background-color: rgba(255, 255, 255, 0.475);
     border-radius: 50px;
 }
@@ -72,21 +72,27 @@
 
 .activity-in-progress{
     background-color: rgba(255, 255, 255, 0.6);
-    padding: 3%;
+    padding: 1%;
     height: 75%;
     display: inline-block;
     margin-right: 5%;
+    width: 350px;
+}
+.photo-act-schedule{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .photo {
-    width: 60%;
+    width: 280px;
     aspect-ratio: 1/1;
     background-color: black;
     margin: auto;
     margin-top: 10%;
 }
 .photo-block {
-    width: 90%;
+    width: 80%;
     aspect-ratio: 1/1;
 }
 
@@ -113,7 +119,7 @@
     cursor: pointer;
     width: 35%;
     margin: 0 auto;
-    margin-top: 6%;
+    margin-top: 2%;
     display: block;
     margin-bottom: 3%;
 }

@@ -15,7 +15,7 @@ def create_app():
     """Creates app"""
     app = Flask(__name__)
     app.config['SECRET_KEY'] = '\x8bc\xaa\x9aI\xed\xb8\xe6[Y\x1aF'
-    app.config["SQLALCHEMY_DATABASE_URI"] = f'sqlite:///{DB_NAME}'
+    app.config["SQLALCHEMY_DATABASE_URI"] = f'sqlite:////home/CoFind/V01/instance/{DB_NAME}'
     db.init_app(app)
 
     #login manager
